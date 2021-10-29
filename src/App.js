@@ -1,8 +1,9 @@
 import React from 'react';
-// initial commit
+import Header from './Header';
+
 class App extends React.Component {
   render() {
-    return (<p>Sistema Solar</p>);
+    return (<Header />);
   }
 }
 
