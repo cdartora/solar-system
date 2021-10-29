@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from './data/planets';
-import Title from './Title'
+import Title from './Title';
+import PlanetCard from './PlanetCard';
 
 class SolarSystem extends Component {
   render() { 
@@ -10,12 +11,9 @@ class SolarSystem extends Component {
         
         <Title headline='Planetas' />
 
-        {data.map(planet => { // map that renders every planet dinamically
+        {data.map(planet => { // map that renders every planet card dinamically
           return (
-            <>
-              <h4>{planet.name}</h4>
-              <img src={planet.image} alt={planet.name} />
-            </>
+            <PlanetCard planetName={ planet.name } planetImage={ planet.image }/>
           )
         })}
 
